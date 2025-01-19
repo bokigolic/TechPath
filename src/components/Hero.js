@@ -13,12 +13,13 @@ const Hero = () => {
 
       {/* Sadržaj Hero sekcije */}
       <div className="hero-content">
-        <h1 className="hero-title">ITStudy</h1>
-        <p className="hero-subtitle">Your gateway to IT success</p>
-        <button className="btn btn-primary btn-lg">Get Started</button>
+        <h1 className="hero-title">Welcome to ITStudy</h1>
+        <p className="hero-subtitle">Learn. Build. Succeed in the IT World</p>
+        <button className="btn btn-primary btn-lg hero-btn">Start Your Journey</button>
       </div>
     </div>
   );
 };
+
 
 export default Hero;

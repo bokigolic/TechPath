@@ -1,0 +1,49 @@
+/* Glavni stilovi za About sekciju */
+.about-container {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Stilovi za ikone */
+.about-icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.icon-item {
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: 200px;
+  text-align: center;
+}
+
+.icon-item i {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.icon-item p {
+  font-size: 1rem;
+  color: #333;
+}

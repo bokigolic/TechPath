@@ -13,13 +13,13 @@ const ParticlesBackground = () => {
         fpsLimit: 60, // Maksimalni FPS
         particles: {
           color: {
-            value: "#ffffff", // Boja čestica
+            value: "#00aaff", // Svetloplava boja
           },
           links: {
-            color: "#ffffff",
-            distance: 150,
+            color: "#00aaff", // Boja linija među česticama
+            distance: 120,
             enable: true,
-            opacity: 0.3,
+            opacity: 0.5,
             width: 1,
           },
           move: {
