@@ -1,15 +1,14 @@
-import './App.css';
-import Hero from './components/Hero';
-import About from './components/About';
+import React from "react";
+import Hero from "./components/Hero";
+import LearningSuggestions from "./components/LearningSuggestions";
 
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div>
       <Hero />
-      <About />
+      <LearningSuggestions />
     </div>
   );
-}
+};
 
 export default App;

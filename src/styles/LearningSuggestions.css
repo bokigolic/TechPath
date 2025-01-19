@@ -1,0 +1,46 @@
+.learning-suggestions {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.suggestions-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.suggestions-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.suggestion-item {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px 0;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0; /* Animacija: sakriveno pre pojavljivanja */
+  transform: translateY(50px);
+}
+
+.suggestion-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dodaj stilove za tekst */
+.suggestion-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.suggestion-item p {
+  font-size: 1rem;
+  color: #555;
+}

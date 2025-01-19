@@ -1,15 +1,26 @@
 import React from "react";
-import ParticlesBackground from "./ParticlesBackground"; // Pozadina sa česticama
-import "../styles/Hero.css"; // Lokalni CSS stilovi
+import "../styles/Hero.css";
+import heroImage from "../assets/images/hero-bg.png";
 
 const Hero = () => {
   return (
-    <div className="hero-container">
-      {/* Pozadinske čestice */}
-      <ParticlesBackground />
-
-      {/* Pozadinski gradient */}
-      <div className="animated-bg"></div>
+    <div className="hero-container" style={{ height: "700px", position: "relative", overflow: "hidden" }}>
+      {/* Pozadinska slika sa opacity efektom */}
+      <div
+        className="hero-image"
+        style={{
+          // backgroundImage: `url(${heroImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "opacity(0.8)",
+          width: "100%",
+          height: "100%",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          zIndex: -1,
+        }}
+      ></div>
 
       {/* Sadržaj Hero sekcije */}
       <div className="hero-content">
@@ -20,6 +31,5 @@ const Hero = () => {
     </div>
   );
 };
-
 
 export default Hero;
