@@ -1,0 +1,49 @@
+{
+  "topics": [
+    {
+      "name": "html-css",
+      "title": "HTML & CSS Basics",
+      "description": "Learn the building blocks of the web. HTML for structure, and CSS for styling.",
+      "resources": [
+        { "name": "MDN HTML Docs", "link": "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+        { "name": "CSS Tricks", "link": "https://css-tricks.com/" }
+      ]
+    },
+    {
+      "name": "javascript",
+      "title": "JavaScript Fundamentals",
+      "description": "Master the language of the web for interactivity and dynamic content.",
+      "resources": [
+        { "name": "JavaScript Info", "link": "https://javascript.info/" },
+        { "name": "Eloquent JavaScript", "link": "https://eloquentjavascript.net/" }
+      ]
+    },
+    {
+      "name": "react",
+      "title": "React Framework",
+      "description": "Learn to build scalable and dynamic front-end applications using React.",
+      "resources": [
+        { "name": "React Docs", "link": "https://reactjs.org/docs/getting-started.html" },
+        { "name": "React Patterns", "link": "https://reactpatterns.com/" }
+      ]
+    },
+    {
+      "name": "nodejs",
+      "title": "Node.js & Backend Basics",
+      "description": "Learn server-side programming to build powerful backend systems.",
+      "resources": [
+        { "name": "Node.js Docs", "link": "https://nodejs.org/en/docs/" },
+        { "name": "Express Guide", "link": "https://expressjs.com/" }
+      ]
+    },
+    {
+      "name": "git",
+      "title": "Version Control with Git",
+      "description": "Master version control and collaboration with Git and GitHub.",
+      "resources": [
+        { "name": "Git Docs", "link": "https://git-scm.com/doc" },
+        { "name": "GitHub Guides", "link": "https://guides.github.com/" }
+      ]
+    }
+  ]
+}

@@ -1,167 +1,122 @@
-/* Hero container styling */
+/* Hero.css */
 .hero-container {
-  position: relative;
-  height: 60vh;
+  height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   text-align: center;
-  color: white;
+  color: rgb(5, 5, 5);
   overflow: hidden;
 }
 
-/* Animated gradient background */
-.animated-bg {
+.hero-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #ff7eb3, #ff758c, #ffce55, #52c234);
-  background-size: 400% 400%;
-  animation: gradientAnimation 10s ease infinite;
   z-index: -1;
+  filter: opacity(0.8);
+  background-size: cover;
+  background-position: center;
 }
 
-/* Centered content */
 .hero-content {
-  z-index: 1;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hero-content.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero-title {
-  font-size: 4rem;
-  font-weight: bold;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Button shadow for modern effect */
-.btn {
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Gradient animation */
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-/* Fade-in and slide-up animation for text */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Hero title animation */
-.hero-title {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  animation: fadeInUp 1.5s ease-out 0.5s; /* Animation duration and delay */
-  animation-fill-mode: both; /* Keep the final state after animation ends */
-}
-
-/* Hero subtitle animation */
-.hero-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  animation: fadeInUp 1.5s ease-out 0.8s; /* Slight delay for subtitle */
-  animation-fill-mode: both;
-}
-
-/* Button animation */
-.btn {
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-  animation: fadeInUp 1.5s ease-out 1s; /* Delay after subtitle */
-  animation-fill-mode: both;
-}
-/* Hero pozadina sa česticama i gradientom */
-.hero-container {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.hero-btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
   color: white;
-  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-/* Animirani gradient */
-.animated-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, #7775ee, #2ca0a8, #ffce55, #52c234);
-  background-size: 400% 400%;
-  animation: gradientAnimation 10s ease infinite;
-  z-index: -2; /* Čestice su iznad gradijenta */
+.hero-btn:hover {
+  background-color: #0056b3;
 }
 
-/* Animacija gradienta */
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+/* LearningSuggestions.css */
+.learning-suggestions {
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-/* Sadržaj Hero sekcije */
-.hero-content {
-  z-index: 1; /* Iznad čestica i gradijenta */
+.suggestions-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.hero-title {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  animation: fadeInUp 1.5s ease-out 0.5s;
-  animation-fill-mode: both;
+.suggestions-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.hero-subtitle {
+.suggestion-item {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  opacity: 0; /* Početno skriveno */
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.suggestion-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.suggestion-item h3 {
   font-size: 1.5rem;
-  margin-bottom: 2rem;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  animation: fadeInUp 1.5s ease-out 0.8s;
-  animation-fill-mode: both;
+  margin-bottom: 10px;
 }
 
-.btn {
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-  animation: fadeInUp 1.5s ease-out 1s;
-  animation-fill-mode: both;
+.suggestion-item p {
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
-.btn:hover {
-  transform: scale(1.1); /* Blago povećanje */
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); /* Intenzivnija senka */
-  transition: all 0.3s ease; /* Glađa tranzicija */
+
+.suggestion-item .btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.suggestion-item .btn:hover {
+  background-color: #0056b3;
 }

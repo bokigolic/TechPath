@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/Hero.css";
 import heroImage from "../assets/images/hero-bg.png";
 
 const Hero = () => {
+  useEffect(() => {
+    const heroContent = document.querySelector(".hero-content");
+    heroContent.classList.add("visible");
+  }, []);
+
   return (
     <div className="hero-container" style={{ height: "700px", position: "relative", overflow: "hidden" }}>
       {/* Pozadinska slika sa opacity efektom */}
       <div
         className="hero-image"
         style={{
-          // backgroundImage: `url(${heroImage})`,
+          //backgroundImage: `url(${heroImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           filter: "opacity(0.8)",
