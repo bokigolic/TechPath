@@ -9,21 +9,24 @@ import NodeJs from "./components/topics/NodeJs";
 import Git from "./components/topics/Git";
 import About from "./components/About";
 import "./styles/Header.css";
-import "./styles/LearningSuggestions.css";
+
+const Header = () => (
+  <nav className="header">
+    <div className="nav-container">
+      <Link to="/" className="nav-link">Home</Link>
+      <Link to="/about" className="nav-link">About</Link>
+    </div>
+  </nav>
+);
 
 const App = () => {
   return (
     <Router>
       <div>
-        {/* Navigacija */}
-        <nav className="header">
-          <div className="nav-container">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/about" className="nav-link">About</Link>
-          </div>
-        </nav>
+        {/* Sticky Header */}
+        <Header />
 
-        {/* Rute */}
+        {/* Routes */}
         <Routes>
           <Route path="/" element={<div><Hero /><LearningSuggestions /></div>} />
           <Route path="/about" element={<About />} />

@@ -4,8 +4,9 @@
   top: 0;
   z-index: 1000;
   background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(30, 30, 30, 0.6);
   padding: 10px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-container {
@@ -19,15 +20,16 @@
 
 .nav-link {
   text-decoration: none;
-  color: #333;
-  font-size: 1rem;
+  color: black !important; /* Crna boja teksta */
+  font-size: 1.2rem; /* Povećana veličina fonta za vidljivost */
   font-weight: bold;
-  padding: 5px 10px;
-  transition: color 0.3s ease, background-color 0.3s ease;
-  border-radius: 5px;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-link:hover {
-  color: white;
-  background-color: #007bff;
+  color: #007bff; /* Promena boje na hover za bolju vidljivost */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Pojava senke na hover */
+  border-radius: 6px;
+  padding: 0px 5px;
+  font-size: 18px;
 }
