@@ -1,28 +1,31 @@
 import React from "react";
-import "../styles/About.css"; // Lokalni CSS za About sekciju
+import "../styles/About.css";
 
 const About = () => {
   return (
     <div className="about-container">
-      <div className="about-content">
-        <h2 className="about-title">About Us</h2>
-        <p className="about-description">
-          At ITStudy, we are committed to transforming your IT skills into a professional career.
-          With tailored courses, expert mentors, and hands-on projects, we help you achieve your goals.
-        </p>
-        <div className="about-icons">
-          <div className="icon-item">
-            <i className="fas fa-laptop-code"></i>
-            <p>Practical Learning</p>
-          </div>
-          <div className="icon-item">
-            <i className="fas fa-user-friends"></i>
-            <p>Expert Mentors</p>
-          </div>
-          <div className="icon-item">
-            <i className="fas fa-award"></i>
-            <p>Certified Courses</p>
-          </div>
+      <h2 className="about-title">About Us</h2>
+      <p className="about-description">
+        At ITStudy, we are dedicated to providing top-quality education to help
+        you achieve your goals in the IT world. Our courses are designed by
+        industry experts and focus on practical skills that prepare you for the
+        real world.
+      </p>
+      <div className="about-features">
+        <div className="feature-item">
+          <i className="fas fa-laptop-code feature-icon"></i>
+          <h3>Hands-On Learning</h3>
+          <p>Engage in real-world projects and practical exercises.</p>
+        </div>
+        <div className="feature-item">
+          <i className="fas fa-user-friends feature-icon"></i>
+          <h3>Expert Mentors</h3>
+          <p>Learn from experienced professionals in the field.</p>
+        </div>
+        <div className="feature-item">
+          <i className="fas fa-award feature-icon"></i>
+          <h3>Certified Programs</h3>
+          <p>Earn certificates to showcase your achievements.</p>
         </div>
       </div>
     </div>
