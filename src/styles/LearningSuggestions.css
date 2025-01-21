@@ -1,11 +1,12 @@
 .learning-suggestions {
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 .suggestions-title {
-  font-size: 2rem;
   text-align: center;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
@@ -13,34 +14,44 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
 .suggestion-item {
-  width: 80%;
-  max-width: 800px;
-  margin: 20px 0;
-  background-color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  /*opacity: 0; /* Animacija: sakriveno pre pojavljivanja */
-  transform: translateY(50px);
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.suggestion-item.visible {
-  opacity: 1;
-  transform: translateY(0);
+.suggestion-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Dodaj stilove za tekst */
 .suggestion-item h3 {
   font-size: 1.5rem;
-  color: #333;
   margin-bottom: 10px;
 }
 
 .suggestion-item p {
   font-size: 1rem;
   color: #555;
+}
+
+.suggestion-item .btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.suggestion-item .btn:hover {
+  background-color: #0056b3;
 }
