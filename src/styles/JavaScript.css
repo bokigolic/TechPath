@@ -1,0 +1,184 @@
+/* Container styling */
+.javascript-container {
+  display: flex;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Navigation styling */
+.javascript-nav {
+  width: 25%;
+  padding: 20px;
+  background: #ffffff;
+  border-right: 2px solid #e0e0e0;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.javascript-nav h2 {
+  font-size: 1.8rem;
+  color: #0078d4;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.javascript-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.javascript-nav ul li {
+  margin: 15px 0;
+}
+
+.javascript-nav ul li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #0078d4;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.javascript-nav ul li a:hover {
+  background: #0078d4;
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 120, 212, 0.3);
+}
+
+/* Main content styling */
+.javascript-main {
+  margin-left: 28%;
+  padding: 40px;
+  line-height: 1.8;
+  background: #f4f4f4;
+  min-height: 100vh;
+}
+
+.javascript-main h1 {
+  font-size: 2.5rem;
+  color: #333333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.javascript-main h2 {
+  font-size: 2rem;
+  color: #0078d4;
+  margin-bottom: 15px;
+}
+
+.javascript-main p {
+  font-size: 1.2rem;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.javascript-main ul {
+  margin: 20px 0;
+  padding-left: 40px;
+  color: #444;
+}
+
+.javascript-main ul li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.javascript-main pre {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.javascript-main pre code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Table styling */
+.javascript-main table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.javascript-main table th,
+.javascript-main table td {
+  text-align: left;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.javascript-main table th {
+  background: #0078d4;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.javascript-main table tr:hover {
+  background: #f1faff;
+  cursor: pointer;
+}
+
+/* Code block styling */
+.javascript-main code {
+  background: #f1f1f1;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+  color: #0078d4;
+}
+
+.javascript-main pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+/* Buttons (if any) */
+.javascript-main .btn {
+  background-color: #0078d4;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.javascript-main .btn:hover {
+  background-color: #005bb5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 3D Shadowing for sections */
+.javascript-main section {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.javascript-main section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
