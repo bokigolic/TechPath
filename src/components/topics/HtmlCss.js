@@ -1,8 +1,15 @@
 // File: HtmlCss.js
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/HtmlCss.css";
 
 const HtmlCss = () => {
+
+  // Dodavanje stanja za kviz
+  const [showQuiz, setShowQuiz] = useState(false); // Da li je kviz aktivan
+  const [score, setScore] = useState(0); // Rezultat korisnika
+  const [currentQuestion, setCurrentQuestion] = useState(0); // Trenutno pitanje
+
+
   const sections = [
     {
       id: "html-structure",
@@ -179,8 +186,47 @@ div:hover {
     },
   ];
 
+  const quizQuestions = [
+    {
+      question: "What does <!DOCTYPE html> represent in an HTML document?",
+      options: [
+        "It defines the language of the document.",
+        "It specifies the version of HTML.",
+        "It starts the HTML body.",
+        "It is used to link external files.",
+      ],
+      correctAnswer: 1,
+    },
+    {
+      question: "Which tag is used for creating hyperlinks?",
+      options: ["<a>", "<link>", "<href>", "<nav>"],
+      correctAnswer: 0,
+    },
+    {
+      question: "What property in CSS is used to change the background color?",
+      options: ["color", "background-color", "bg-color", "back-color"],
+      correctAnswer: 1,
+    },
+  ];
+
+  const handleAnswerClick = (index) => {
+    if (index === quizQuestions[currentQuestion].correctAnswer) {
+      setScore(score + 1);
+    }
+
+    if (currentQuestion < quizQuestions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      alert(`Quiz completed! Your score: ${score + 1}/${quizQuestions.length}`);
+      setScore(0);
+      setCurrentQuestion(0);
+      setShowQuiz(false);
+    }
+  };
+
   return (
     <div className="html-css-container">
+      {/* Left Navigation */}
       <nav className="left-nav">
         <ul>
           {sections.map((section) => (
@@ -190,8 +236,18 @@ div:hover {
               </a>
             </li>
           ))}
+          <li>
+            <button
+              className="quiz-button"
+              onClick={() => setShowQuiz(!showQuiz)}
+            >
+              {showQuiz ? "Close Quiz" : "Start Quiz"}
+            </button>
+          </li>
         </ul>
       </nav>
+
+      {/* Content Sections */}
       <div className="content-area">
         {sections.map((section) => (
           <section id={section.id} key={section.id} className="content-section">
@@ -202,6 +258,26 @@ div:hover {
             </pre>
           </section>
         ))}
+
+        {/* Quiz Section */}
+        {showQuiz && (
+          <div className="quiz-section">
+            <h2>Quiz: Test Your Knowledge</h2>
+            <p>{quizQuestions[currentQuestion].question}</p>
+            <ul>
+              {quizQuestions[currentQuestion].options.map((option, index) => (
+                <li key={index}>
+                  <button
+                    className="quiz-option"
+                    onClick={() => handleAnswerClick(index)}
+                  >
+                    {option}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
