@@ -1,121 +1,100 @@
-import React from "react";
-import "../../styles/HtmlCss.css";
+// File: HtmlCss.js
+import React, { useState } from 'react';
+import '../../styles/HtmlCss.css';
 
 const HtmlCss = () => {
+  const [activeSection, setActiveSection] = useState(null);
+
+  const sections = [
+    {
+      id: 'html-intro',
+      title: 'Introduction to HTML',
+      content: 'HTML (HyperText Markup Language) is the foundation of every web page. It defines the structure of web pages using a system of elements and attributes.',
+      example: '<!DOCTYPE html>\n<html>\n  <head>\n    <title>Page Title</title>\n  </head>\n  <body>\n    <h1>This is a Heading</h1>\n    <p>This is a paragraph.</p>\n  </body>\n</html>',
+      url: 'https://www.w3schools.com/html/html_intro.asp'
+    },
+    {
+      id: 'html-structure',
+      title: 'HTML Document Structure',
+      content: 'An HTML document includes the DOCTYPE declaration, head, and body sections. These are essential for creating a well-structured webpage.',
+      example: '<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Document</title>\n  </head>\n  <body>\n    <!-- Content goes here -->\n  </body>\n</html>',
+      url: 'https://www.w3schools.com/html/html_document.asp'
+    },
+    {
+      id: 'html-common-tags',
+      title: 'Common HTML Tags',
+      content: 'Tags like <h1> to <h6>, <p>, <ul>, <ol>, <a>, and <img> are frequently used to structure and link content on a webpage.',
+      example: '<h1>Heading</h1>\n<p>Paragraph</p>\n<ul>\n  <li>List Item 1</li>\n  <li>List Item 2</li>\n</ul>',
+      url: 'https://www.w3schools.com/html/html_elements.asp'
+    },
+    {
+      id: 'html-forms',
+      title: 'HTML Forms and Input',
+      content: 'Forms allow users to submit data using elements such as <form>, <input>, <label>, and <textarea>.',
+      example: '<form>\n  <label for="name">Name:</label>\n  <input type="text" id="name" name="name">\n  <input type="submit" value="Submit">\n</form>',
+      url: 'https://www.w3schools.com/html/html_forms.asp'
+    },
+    {
+      id: 'html-semantic',
+      title: 'Semantic HTML',
+      content: 'Semantic tags like <header>, <footer>, <article>, and <section> improve accessibility and search engine optimization.',
+      example: '<header>\n  <h1>Website Header</h1>\n</header>\n<section>\n  <article>\n    <h2>Article Title</h2>\n    <p>Article content...</p>\n  </article>\n</section>',
+      url: 'https://www.w3schools.com/html/html5_semantic_elements.asp'
+    },
+    {
+      id: 'css-intro',
+      title: 'Introduction to CSS',
+      content: 'CSS (Cascading Style Sheets) is used to style HTML elements by applying colors, fonts, and layout techniques.',
+      example: 'body {\n  font-family: Arial, sans-serif;\n  color: #333;\n}\nh1 {\n  color: blue;\n}',
+      url: 'https://www.w3schools.com/css/css_intro.asp'
+    },
+    {
+      id: 'css-box-model',
+      title: 'CSS Box Model',
+      content: 'The CSS box model describes the rectangular boxes generated for elements. It includes margin, border, padding, and content.',
+      example: 'div {\n  margin: 10px;\n  border: 1px solid black;\n  padding: 20px;\n  width: 100px;\n}',
+      url: 'https://www.w3schools.com/css/css_boxmodel.asp'
+    }
+  ];
+
+  const toggleSection = (id) => {
+    setActiveSection(activeSection === id ? null : id);
+  };
+
   return (
-    <div>
-      {/* Header Section */}
-      <header className="header">
-        <div className="logo">
-          <i className="fas fa-code"></i> Learn Front-End
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#html-section">HTML</a></li>
-            <li><a href="#css-section">CSS</a></li>
-            <li><a href="#resources-section">Resources</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      {/* Hero Section */}
-      <section className="hero">
-        <h1>Welcome to Front-End Basics</h1>
-        <p>Start your journey with the foundations of web development: HTML and CSS.</p>
-        <a href="#html-section" className="btn">Get Started</a>
-      </section>
-
-      {/* HTML Section */}
-      <section id="html-section" className="content-section">
-        <h2><i className="fas fa-html5"></i> Introduction to HTML</h2>
-        <p>
-          HTML (<strong>HyperText Markup Language</strong>) is the standard markup language for creating web pages.
-          It defines the structure of your content and allows you to organize text, images, links, and more.
-        </p>
-
-        <h3>Basic Structure of an HTML Document:</h3>
-        <pre className="code-block">
-          &lt;!DOCTYPE html&gt;<br />
-          &lt;html&gt;<br />
-          &nbsp;&nbsp;&lt;head&gt;<br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;<br />
-          &nbsp;&nbsp;&lt;/head&gt;<br />
-          &nbsp;&nbsp;&lt;body&gt;<br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello World!&lt;/h1&gt;<br />
-          &nbsp;&nbsp;&lt;/body&gt;<br />
-          &lt;/html&gt;
-        </pre>
-
-        <p>Every HTML document has three main parts:</p>
+    <div className="html-css-container">
+      {/* Left Navigation */}
+      <nav className="left-nav">
         <ul>
-          <li><strong>&lt;html&gt;</strong>: The root element that contains all other elements.</li>
-          <li><strong>&lt;head&gt;</strong>: Contains meta-information about the document (title, styles, etc.).</li>
-          <li><strong>&lt;body&gt;</strong>: Contains the visible content of the webpage.</li>
+          {sections.map((section) => (
+            <li key={section.id}>
+              <button className="nav-button" onClick={() => toggleSection(section.id)}>
+                {section.title}
+              </button>
+            </li>
+          ))}
         </ul>
+      </nav>
 
-        <h3>Interactive Examples:</h3>
-        <p>Try writing some basic HTML yourself on these platforms:</p>
-        <ul>
-          <li><a href="https://www.w3schools.com/html/html_editors.asp" target="_blank" rel="noopener noreferrer">W3Schools Online Editor</a></li>
-          <li><a href="https://codepen.io/" target="_blank" rel="noopener noreferrer">CodePen</a></li>
-        </ul>
-      </section>
-
-      {/* CSS Section */}
-      <section id="css-section" className="content-section dark-bg">
-        <h2><i className="fab fa-css3-alt"></i> Introduction to CSS</h2>
-        <p>
-          CSS (<strong>Cascading Style Sheets</strong>) is the language used to style HTML content. With CSS, you can control colors, fonts, layouts, spacing, and much more.
-        </p>
-
-        <h3>Basic Structure of a CSS Rule:</h3>
-        <pre className="code-block">
-          selector &#123;<br />
-          &nbsp;&nbsp;property: value;<br />
-          &#125;
-        </pre>
-        <p>Example:</p>
-        <pre className="code-block">
-          h1 &#123;<br />
-          &nbsp;&nbsp;color: blue;<br />
-          &nbsp;&nbsp;font-size: 24px;<br />
-          &#125;
-        </pre>
-
-        <h3>CSS Selectors:</h3>
-        <ul>
-          <li><strong>Element Selector</strong>: Targets all elements of a specific type (e.g., <code>p</code>).</li>
-          <li><strong>Class Selector</strong>: Targets elements with a specific class (e.g., <code>.my-class</code>).</li>
-          <li><strong>ID Selector</strong>: Targets an element with a unique ID (e.g., <code>#my-id</code>).</li>
-        </ul>
-
-        <h3>Interactive Examples:</h3>
-        <p>Explore CSS with live editors:</p>
-        <ul>
-          <li><a href="https://www.w3schools.com/css/css_syntax.asp" target="_blank" rel="noopener noreferrer">W3Schools CSS Basics</a></li>
-          <li><a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS Tricks</a></li>
-        </ul>
-      </section>
-
-      {/* Resources Section */}
-      <section id="resources-section" className="content-section">
-        <h2><i className="fas fa-book"></i> Additional Resources</h2>
-        <p>Deepen your knowledge of HTML and CSS with these resources:</p>
-        <ul>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN: HTML Documentation</a></li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">MDN: CSS Documentation</a></li>
-          <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
-          <li><a href="https://frontendmentor.io/" target="_blank" rel="noopener noreferrer">Frontend Mentor</a></li>
-          <li><a href="https://freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a></li>
-        </ul>
-      </section>
-
-      {/* Footer */}
-      <footer>
-        <p>&copy; 2025 Learn Front-End. All rights reserved.</p>
-      </footer>
+      {/* Content Area */}
+      <div className="content-area">
+        {sections.map((section) => (
+          <div key={section.id} className="content-section">
+            <h2>{section.title}</h2>
+            <p>{section.content}</p>
+            {activeSection === section.id && (
+              <div className="accordion-content">
+                <pre><code>{section.example}</code></pre>
+                <a href={section.url} target="_blank" rel="noopener noreferrer">Learn more</a>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
 export default HtmlCss;
+
+
