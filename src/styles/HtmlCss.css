@@ -1,17 +1,17 @@
-/* Overall container */
-.html-css-container {
+/* Container styling for all components */
+.component-container {
   display: flex;
   font-family: "Arial", sans-serif;
+  margin: 0;
   background-color: #f9f9f9;
   color: #333;
-  min-height: 100vh;
 }
 
-/* Left Navigation */
-.left-nav {
+/* Navigation styling for all components */
+.component-nav {
   width: 25%;
-  background: #ffffff;
   padding: 20px;
+  background: #ffffff;
   border-right: 2px solid #e0e0e0;
   box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -19,160 +19,166 @@
   overflow-y: auto;
 }
 
-.left-nav ul {
+.component-nav h2 {
+  font-size: 1.8rem;
+  color: #0078d4;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.component-nav ul {
   list-style: none;
   padding: 0;
 }
 
-.left-nav li {
-  margin: 10px 0;
+.component-nav ul li {
+  margin: 15px 0;
 }
 
-.nav-link {
-  display: block;
-  background-color: #0078d4;
-  color: #ffffff;
+.component-nav ul li a {
   text-decoration: none;
+  font-size: 1.1rem;
+  color: #0078d4;
   padding: 10px 15px;
-  font-size: 1rem;
+  display: inline-block;
   border-radius: 8px;
-  text-align: left;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
-.nav-link:hover {
-  background-color: #005bb5;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.component-nav ul li a:hover {
+  background: #0078d4;
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 120, 212, 0.3);
 }
 
-/* Content Area */
-.content-area {
+/* Main content styling for all components */
+.component-main {
   margin-left: 28%;
   padding: 40px;
-  flex: 1;
+  line-height: 1.8;
+  background: #f4f4f4;
+  min-height: 100vh;
 }
 
-.content-section {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  padding: 20px 30px;
-  margin-bottom: 40px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.component-main h1 {
+  font-size: 2.5rem;
+  color: #333333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 
-.content-section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-}
-
-.content-section h2 {
-  font-size: 1.8rem;
+.component-main h2 {
+  font-size: 2rem;
   color: #0078d4;
   margin-bottom: 15px;
 }
 
-.content-section p {
+.component-main p {
   font-size: 1.2rem;
-  color: #555;
+  color: #555555;
   margin-bottom: 20px;
 }
 
-.content-section pre {
-  background: #f4f4f4;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #e0e0e0;
-  overflow-x: auto;
+.component-main ul {
+  margin: 20px 0;
+  padding-left: 40px;
+  color: #444;
 }
 
-.content-section a {
-  text-decoration: none;
-  color: #0078d4;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.content-section a:hover {
-  color: #005bb5;
-}
-.html-css-container {
-  display: flex;
-  font-family: Arial, sans-serif;
-}
-
-.left-nav {
-  width: 20%;
-  background: #f4f4f4;
-  padding: 15px;
-  border-right: 1px solid #ddd;
-}
-
-.left-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.left-nav .nav-link {
-  display: block;
-  padding: 10px;
-  margin: 5px 0;
-  text-decoration: none;
-  color: #333;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.left-nav .nav-link:hover {
-  background-color: #007bff;
-  color: white;
-}
-
-.quiz-button {
-  margin-top: 15px;
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.quiz-button:hover {
-  background-color: #218838;
-}
-
-.content-area {
-  flex-grow: 1;
-  padding: 20px;
-}
-
-.content-section {
-  margin-bottom: 30px;
-}
-
-.quiz-section {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-.quiz-option {
-  display: block;
-  width: 100%;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
+.component-main ul li {
   margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.component-main pre {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.component-main pre code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Table styling */
+.component-main table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.component-main table th,
+.component-main table td {
+  text-align: left;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.component-main table th {
+  background: #0078d4;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.component-main table tr:hover {
+  background: #f1faff;
   cursor: pointer;
 }
 
-.quiz-option:hover {
-  background-color: #0056b3;
+/* Code block styling */
+.component-main code {
+  background: #f1f1f1;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+  color: #0078d4;
+}
+
+.component-main pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+/* Buttons (if any) */
+.component-main .btn {
+  background-color: #0078d4;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.component-main .btn:hover {
+  background-color: #005bb5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 3D Shadowing for sections */
+.component-main section {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.component-main section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
